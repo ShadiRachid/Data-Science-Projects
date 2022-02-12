@@ -1,0 +1,90 @@
+/// The Results of the First Regression: GPA vs SAT \\\ ===========================================================================================
+
+
+
+The Summary of the regression analysis is: 
+
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                    GPA   R-squared:                       0.406
+Model:                            OLS   Adj. R-squared:                  0.399
+Method:                 Least Squares   F-statistic:                     56.05
+Date:                Sat, 12 Feb 2022   Prob (F-statistic):           7.20e-11
+Time:                        02:33:16   Log-Likelihood:                 12.672
+No. Observations:                  84   AIC:                            -21.34
+Df Residuals:                      82   BIC:                            -16.48
+Df Model:                           1                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P>|t|      [0.025      0.975]
+------------------------------------------------------------------------------
+const          0.2750      0.409      0.673      0.503      -0.538       1.088
+SAT            0.0017      0.000      7.487      0.000       0.001       0.002
+==============================================================================
+Omnibus:                       12.839   Durbin-Watson:                   0.950
+Prob(Omnibus):                  0.002   Jarque-Bera (JB):               16.155
+Skew:                          -0.722   Prob(JB):                     0.000310
+Kurtosis:                       4.590   Cond. No.                     3.29e+04
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The condition number is large, 3.29e+04. This might indicate that there are
+strong multicollinearity or other numerical problems.
+
+===========================================
+
+The OLS linear regression model can be expressed as:
+yhat = 1.66e-03x + 2.75e-01
+
+The variation in GPA is 40.6% explained by SAT scores
+
+the p-value of the slope is: 7.20e-11
+It is less than 0.05, meaning our result is significant and model accepted
+
+
+
+
+/// The Results of the Second Regression: Price vs Size \\\ ===========================================================================================
+
+
+
+The Summary of the regression analysis is: 
+
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                  price   R-squared:                       0.745
+Model:                            OLS   Adj. R-squared:                  0.742
+Method:                 Least Squares   F-statistic:                     285.9
+Date:                Sat, 12 Feb 2022   Prob (F-statistic):           8.13e-31
+Time:                        02:33:17   Log-Likelihood:                -1198.3
+No. Observations:                 100   AIC:                             2401.
+Df Residuals:                      98   BIC:                             2406.
+Df Model:                           1                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P>|t|      [0.025      0.975]
+------------------------------------------------------------------------------
+const       1.019e+05   1.19e+04      8.550      0.000    7.83e+04    1.26e+05
+size         223.1787     13.199     16.909      0.000     196.986     249.371
+==============================================================================
+Omnibus:                        6.262   Durbin-Watson:                   2.267
+Prob(Omnibus):                  0.044   Jarque-Bera (JB):                2.938
+Skew:                           0.117   Prob(JB):                        0.230
+Kurtosis:                       2.194   Cond. No.                     2.75e+03
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The condition number is large, 2.75e+03. This might indicate that there are
+strong multicollinearity or other numerical problems.
+
+===========================================
+
+The OLS linear regression model can be expressed as:
+yhat = 2.23e+02x + 1.02e+05
+
+The variation in Price is 74.47% explained by Price
+
+the p-value of the slope is: 8.13e-31
+It is less than 0.05, meaning our result is significant and model accepted
