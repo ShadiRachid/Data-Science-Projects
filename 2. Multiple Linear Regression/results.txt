@@ -1,0 +1,98 @@
+/// The Results of the First Regression: GPA vs SAT & Rand 1,2,3 \\\ 
+===========================================================================================
+
+
+
+The Summary of the regression analysis is: 
+
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                    GPA   R-squared:                       0.407
+Model:                            OLS   Adj. R-squared:                  0.392
+Method:                 Least Squares   F-statistic:                     27.76
+Date:                Mon, 14 Feb 2022   Prob (F-statistic):           6.58e-10
+Time:                        22:08:46   Log-Likelihood:                 12.720
+No. Observations:                  84   AIC:                            -19.44
+Df Residuals:                      81   BIC:                            -12.15
+Df Model:                           2                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P>|t|      [0.025      0.975]
+------------------------------------------------------------------------------
+const          0.2960      0.417      0.710      0.480      -0.533       1.125
+SAT            0.0017      0.000      7.432      0.000       0.001       0.002
+Rand 1,2,3    -0.0083      0.027     -0.304      0.762      -0.062       0.046
+==============================================================================
+Omnibus:                       12.992   Durbin-Watson:                   0.948
+Prob(Omnibus):                  0.002   Jarque-Bera (JB):               16.364
+Skew:                          -0.731   Prob(JB):                     0.000280
+Kurtosis:                       4.594   Cond. No.                     3.33e+04
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The condition number is large, 3.33e+04. This might indicate that there are
+strong multicollinearity or other numerical problems.
+
+===========================================
+
+The OLS multiple linear regression model can be expressed as:
+yhat = 1.65e-03SAT + -8.27e-03'Rand 1,2,3' + 2.96e-01
+
+The variation in GPA is 40.67% explained by SAT scores & 'Rand 1,2,3'
+The predicted GPA of an SAT score of 1750 and a 'Rand 1,2,3' of 2 based on our model is: 3.17
+
+the p-value of the SAT coefficient is: 9.79e-11
+the p-value of the 'Rand 1,2,3' coefficient is: 7.62e-01
+Coeficcient of 'Rand 1,2,3' is greater than 0.05, meaning our model is not accepted
+R2-adjusted of a simple model is greater than of this model => omit variable 'Rand 1,2,3'
+
+
+
+
+/// The Results of the Second Regression: price vs size & year \\\ 
+===========================================================================================
+
+
+
+The Summary of the regression analysis is: 
+
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                  price   R-squared:                       0.776
+Model:                            OLS   Adj. R-squared:                  0.772
+Method:                 Least Squares   F-statistic:                     168.5
+Date:                Mon, 14 Feb 2022   Prob (F-statistic):           2.77e-32
+Time:                        22:08:46   Log-Likelihood:                -1191.7
+No. Observations:                 100   AIC:                             2389.
+Df Residuals:                      97   BIC:                             2397.
+Df Model:                           2                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P>|t|      [0.025      0.975]
+------------------------------------------------------------------------------
+const      -5.772e+06   1.58e+06     -3.647      0.000   -8.91e+06   -2.63e+06
+size         227.7009     12.474     18.254      0.000     202.943     252.458
+year        2916.7853    785.896      3.711      0.000    1357.000    4476.571
+==============================================================================
+Omnibus:                       10.083   Durbin-Watson:                   2.250
+Prob(Omnibus):                  0.006   Jarque-Bera (JB):                3.678
+Skew:                           0.095   Prob(JB):                        0.159
+Kurtosis:                       2.080   Cond. No.                     9.41e+05
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The condition number is large, 9.41e+05. This might indicate that there are
+strong multicollinearity or other numerical problems.
+
+===========================================
+
+The OLS multiple linear regression model can be expressed as:
+yhat = 2.28e+02size + 2.92e+03year + -5.77e+06
+
+The variation in price is 77.65% explained by size & year
+The predicted price of an apartment of size 580 and a year of 2012 based on our model is: 228371.56
+
+the p-value of the size coefficient is: 3.86e-33the p-value of the year coefficient is: 3.44e-04
+They are both less than 0.05, meaning our result is significant and model accepted

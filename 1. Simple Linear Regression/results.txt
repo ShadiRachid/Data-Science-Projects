@@ -10,8 +10,8 @@ The Summary of the regression analysis is:
 Dep. Variable:                    GPA   R-squared:                       0.406
 Model:                            OLS   Adj. R-squared:                  0.399
 Method:                 Least Squares   F-statistic:                     56.05
-Date:                Sat, 12 Feb 2022   Prob (F-statistic):           7.20e-11
-Time:                        12:04:14   Log-Likelihood:                 12.672
+Date:                Mon, 14 Feb 2022   Prob (F-statistic):           7.20e-11
+Time:                        22:09:59   Log-Likelihood:                 12.672
 No. Observations:                  84   AIC:                            -21.34
 Df Residuals:                      82   BIC:                            -16.48
 Df Model:                           1                                         
@@ -39,6 +39,7 @@ The OLS linear regression model can be expressed as:
 yhat = 1.66e-03x + 2.75e-01
 
 The variation in GPA is 40.6% explained by SAT scores
+The predicted GPA of an SAT score of 1750 based on our model is: 3.17
 
 the p-value of the slope is: 7.20e-11
 It is less than 0.05, meaning our result is significant and model accepted
@@ -58,8 +59,8 @@ The Summary of the regression analysis is:
 Dep. Variable:                  price   R-squared:                       0.745
 Model:                            OLS   Adj. R-squared:                  0.742
 Method:                 Least Squares   F-statistic:                     285.9
-Date:                Sat, 12 Feb 2022   Prob (F-statistic):           8.13e-31
-Time:                        12:04:14   Log-Likelihood:                -1198.3
+Date:                Mon, 14 Feb 2022   Prob (F-statistic):           8.13e-31
+Time:                        22:09:59   Log-Likelihood:                -1198.3
 No. Observations:                 100   AIC:                             2401.
 Df Residuals:                      98   BIC:                             2406.
 Df Model:                           1                                         
@@ -87,6 +88,7 @@ The OLS linear regression model can be expressed as:
 yhat = 2.23e+02x + 1.02e+05
 
 The variation in Price is 74.47% explained by Price
+The predicted Price of an Area of 580 based on our model is: 231356.27
 
 the p-value of the slope is: 8.13e-31
 It is less than 0.05, meaning our result is significant and model accepted

@@ -32,11 +32,13 @@ based on SAT scores?
 X1 = data1['SAT']
 y1 = data1['GPA']
 
+
 # creating regression model
 x1 = sm.add_constant(X1)  # creates a y-intercept constants and adds to X1
 LR1 = sm.OLS(y1, x1).fit()  # OLS linear regression model
 summary_1 = LR1.summary()  # summary of regression results
 
+# Extracting Parameters
 # extracts the y-intercept value of linear regression model
 y_intercept_1 = LR1.params[0]
 slope_1 = LR1.params[1]  # extracts the slope of the linear regression model
@@ -47,6 +49,10 @@ P1 = LR1.pvalues[1]  # extracting p value of slope to check significance
 
 # the predicted values by regression model
 yhat_1 = (slope_1 * x1) + y_intercept_1
+
+# calculating a prediction based on our regression model
+prediction_1 = 1750
+predicted_value_1 = (slope_1 * prediction_1) + y_intercept_1
 
 # Plotting Graph
 plt.scatter(X1, y1, c='royalblue')  # scatter plot of original values
@@ -77,12 +83,14 @@ results.write('\n\n')
 y_intercept_1 = "{:.2e}".format(y_intercept_1)
 slope_1 = "{:.2e}".format(slope_1)  # transforms slope to scientific notation
 
-
 results.write("The OLS linear regression model can be expressed as:\n")
 results.write("yhat = " + slope_1 + "x + " + y_intercept_1)
 results.write('\n\n')
 results.write("The variation in GPA is " +
               str(round(R2_1*100, 2))+"% explained by SAT scores")
+results.write('\n')
+results.write('The predicted GPA of an SAT score of '+str(prediction_1) +
+              ' based on our model is: '+str(round(predicted_value_1, 2)))
 results.write('\n\n')
 
 if P1 < 0.05:
@@ -126,6 +134,10 @@ P2 = LR2.pvalues[1]  # extracting p value of slope to check significance
 # the predicted values by regression model
 yhat_2 = (slope_2 * x2) + y_intercept_2
 
+# calculating a prediction based on our regression model
+prediction_2 = 580
+predicted_value_2 = (slope_2 * prediction_2) + y_intercept_2
+
 # Plotting Graph
 plt.scatter(X2, y2)  # scatter plot of original values
 # regression line of predicted values
@@ -162,6 +174,9 @@ results.write("yhat = " + slope_2 + "x + " + y_intercept_2)
 results.write('\n\n')
 results.write("The variation in Price is " +
               str(round(R2_2*100, 2))+"% explained by Price")
+results.write('\n')
+results.write('The predicted Price of an Area of '+str(prediction_2) +
+              ' based on our model is: '+str(round(predicted_value_2, 2)))
 results.write('\n\n')
 
 if P2 < 0.05:
