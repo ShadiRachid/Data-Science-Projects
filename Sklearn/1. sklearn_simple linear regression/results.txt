@@ -24,3 +24,6 @@ max    500681    1842.51
 The R2 value: 7.45e-01
 The Regression function given as:
 Price = 2.23e+02(size) + 1.02e+05
+
+The price of a house with an area of 800 sq ft according to our model is:
+280455.6

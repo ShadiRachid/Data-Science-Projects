@@ -57,7 +57,14 @@ coefficient= "{:.2e}".format(coefficient)
 results.write("The Regression function given as:\n"+ 
               "Price = " +
               str(coefficient)+ "(size) " +
-              "+ "+ str(y_intercept))
+              "+ "+ str(y_intercept)+"\n\n")
+
+# Prediction of price of house of area 800 sq ft
+values = np.array([800])
+values = values.reshape(-1,1)
+prediction = round(reg.predict(values)[0],2)
+results.write("The price of a house with an area of 800 sq ft according to our model is:\n" + 
+              str(prediction))
 
 # Plotting
 plt.scatter(independent_variable, dependent_variable)
@@ -67,5 +74,3 @@ plt.ylabel("Price", fontsize = 15)
 plt.savefig('Price vs Area.png', bbox_inches='tight')
 
 results.close()
-
-
