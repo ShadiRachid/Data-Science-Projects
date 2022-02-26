@@ -20,8 +20,8 @@ data = pd.read_csv('real_estate_price_size.csv')
 results = open('results.txt', "w+")
 
 results.write("Simple Linear Regression Using Sklearn \n\n Data Head:\n")
-results.write(tabulate(data.head())+"\n\n Given data described as:\n")
-results.write(tabulate(data.describe())+"\n\n")
+results.write(tabulate(data.head(),headers='keys', tablefmt='psql')+"\n\n Given data described as:\n")
+results.write(tabulate(data.describe(),headers='keys', tablefmt='psql')+"\n\n")
 
 
 # declaring variables
