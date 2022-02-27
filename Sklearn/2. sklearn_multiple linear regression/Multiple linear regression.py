@@ -6,10 +6,7 @@ Multiple Linear Regression using sklearn
 
 import numpy as np
 import pandas as pd
-import matplotlib.pyplot as plt
-import seaborn as sns
 from tabulate import tabulate
-sns.set()
 
 from sklearn.linear_model import LinearRegression
 
@@ -57,10 +54,9 @@ results.write("The Regression function given as:\n"+
               "+ "+ str(y_intercept)+"\n\n")
 
 # Prediction of SAT 1650 and Rand 2
-values = pd.DataFrame({'SAT':[1650],'Rand 1,2,3':[2]}) # no need to reshape
+values = [[1650,2]]
 prediction = round(reg.predict(values)[0],2)
 results.write("The expected GPA of a student with 1650 SAT and Rand = 2 according to our model is:\n" + 
               str(prediction))
-
 
 results.close()
