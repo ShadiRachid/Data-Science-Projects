@@ -12,3 +12,5 @@
 1. Simple Linear Regression
 2. Multiple Linear Regression
 3. Feature Selection Using f-regression
+4. Standardization
+5. Predictions & Feature Selection with Standardization
