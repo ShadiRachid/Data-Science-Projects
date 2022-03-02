@@ -14,3 +14,4 @@
 3. Feature Selection Using f-regression
 4. Standardization
 5. Predictions & Feature Selection with Standardization
+6. Calculating the Adjusted R2 value in Sklearn
