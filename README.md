@@ -18,3 +18,5 @@
 6. Calculating the Adjusted R2 value in Sklearn
 7. train - test split
 - Summary Sheet
+
+### - Dummy Variables Options
