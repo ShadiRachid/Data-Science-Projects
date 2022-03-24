@@ -19,5 +19,5 @@
 4. Predictions
 - Summary Sheet
 
-#### - Dummy Variables Options
-#### - Replacing NaN Values
+### - Dummy Variables Options
+### - Replacing NaN Values
